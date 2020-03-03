@@ -1,0 +1,96 @@
+<!-- INDEX.HTML-->
+
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(' {{ url_for('static',filename='img/admin.jpg')}} ') ">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin Panel</h1>
+            <span class="subheading">Hello Admin , You are logged in</span>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+            <a href="/dashboard"> <button class="btn btn-primary">Admin home</button></a>
+            <a href="/logout"> <button class="btn btn-primary">Logout</button></a><hr>
+        <h1>Add/Edit Posts</h1>
+ 
+
+<form name="sentMessage" id="contactForm" action="/edit/{{sno}}" method="post" novalidate>
+    <div class="control-group">
+      <div class="form-group floating-label-form-group controls">
+        <label>Title</label>
+        <input type="text" class="form-control" placeholder="Title" id="title" name=title  required data-validation-required-message="Please enter your post title." value="{{post.title}}">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="form-group floating-label-form-group controls">
+        <label>Tagline</label>
+        <input type="text" class="form-control" placeholder="Tagline" id="tagline" name="tagline"  required data-validation-required-message="Please enter post tagline." value="{{post.tagline}}">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+        <label>Slug</label>
+        <input type="text" class="form-control"  placeholder="slug" id="slug" name="slug" required data-validation-required-message="Please enter your phone number." value="{{post.slug}}">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="form-group floating-label-form-group controls">
+        <label>Content (Intro)</label>
+        <input type="text" rows="3" class="form-control" placeholder="content1" id="content1"  name='content1' required data-validation-required-message="Please enter post Introduction." value="{{post.content1}}">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+	
+	 <div class="control-group">
+      <div class="form-group floating-label-form-group controls">
+        <label>Content (Body)</label>
+        <input type="text" rows="3" class="form-control" placeholder="content2" id="content2"  name='content2' required data-validation-required-message="Please enter post Details." value="{{post.content2}}">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+	
+	 <div class="control-group">
+      <div class="form-group floating-label-form-group controls">
+        <label>Content (End)</label>
+        <input type="text" rows="3" class="form-control" placeholder="content3" id="content3"  name='content3' required data-validation-required-message="Please enter post Ending." value="{{post.content3}}">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Image file</label>
+          <input rows="1" class="form-control" placeholder="image file location" id="img_file" name='img_file'  required data-validation-required-message="Please enter image file name." value="{{post.img_file}}">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+
+    <br>
+    <div id="success"></div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+    </div>
+  </form>
+
+
+
+      </div>
+    </div>
+  </div>
+  {% endblock %}

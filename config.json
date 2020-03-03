@@ -1,0 +1,26 @@
+{
+
+  "parameters":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/digitalspark",
+    "prod_uri": "mysql://root:@localhost/digitalsparktech",
+    "fb_url": "https://facebook.com/digitalsparktech",
+    "twitter_url": "https://twitter.com/digitalsparktech",
+    "github_url": "https://github.com/geekyavinash/digitalspark",
+    "blog_name": "Digital Spark",
+    "gmail-username":"avinash.singh@satyug.edu.in",
+    "gmail-password":"123456789",
+
+    "about-text": "This project is developed by me (Avinash Singh) as my summer training project. I developed this project to help any non technical person in their easy understanding of new technology advancements in layman's terms.",
+    "no_of_posts": 5,
+    "login-image": "login.png",
+    "admin-image": "admin.jpeg",
+
+    "admin-user": "avinash",
+    "admin-password": "avinash@2612",
+    "upload-location": "/home/geekyavinash/digitalspark/static/img"
+
+  }
+
+}
